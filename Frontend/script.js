@@ -243,3 +243,4 @@ console.log(fruits==checkfruits)
 
 // console.log(arthmetic(1,3,"/"))
 
+//
