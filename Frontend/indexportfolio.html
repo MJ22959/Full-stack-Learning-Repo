@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | QA Engineer & Developer</title>
+    <link rel="icon" href="Portfolioicon.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style1.css"> 
+    </head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="portfoliologo.jpg" alt="Website Logo">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge">QA Engineer & Developer</span>
+                <h1>Crafting Quality & <br><span class="highlight">Flawless Code</span></h1>
+                <p>Welcome to my personal portfolio. I specialize in delivering high-performance software through rigorous automated testing and full-stack software development.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Welcome boy.png" alt="Portfolio Hero Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-card">
+                <p>As a highly motivated and detail-oriented QA Engineer, I bring over two years of hands-on experience in quality assurance to every project. My expertise spans both manual and automated testing methods across diverse applications, with a technical toolkit covering functional, regression, and UI/UX testing using tools like Selenium, Jira, and Postman.</p>
+                <p>Operating efficiently within Agile environments, I focus on quality and continuous improvement. Beyond QA, I hold a strong foundation in Java and Python programming, network security certification, and a passion for innovative problem-solving—ranging from hackathon-winning mobile apps to presenting cryptology research at national conferences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
+                <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
+                <div class="skill-card"><i class="fa-brands fa-react"></i><span>React / Native</span></div>
+                <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+                <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+                <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+                <div class="skill-card"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Major Academic Project</span>
+                        <h3>Image Caption Generator Using Deep Learning</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Built a deep learning model to automatically generate natural language descriptions for input images, bridging computer vision and natural language processing.</p>
+                        <h4>Technical Approach</h4>
+                        <p>Used pre-trained CNNs (VGG16/InceptionV3) for visual feature extraction paired with an LSTM decoder for sequence generation. Trained on Flickr8k/Flickr30k datasets via TensorFlow and Keras applying beam search and teacher forcing.</p>
+                        <h4>Outcome & Learning</h4>
+                        <p>Gained deep expertise in neural architectures, transfer learning, tokenization, and evaluation metrics like BLEU scores.</p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Research & Cryptology</span>
+                        <h3>Image Encryption via Rubik's Cube Algorithm</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>Created an innovative image encryption system utilizing 3D matrix operations inspired by Rubik's Cube permutations to secure digital image transmission.</p>
+                        <h4>Technical Approach</h4>
+                        <p>Shuffled pixel positions and color channels reversibly using 3D matrix rotations. Implemented using Python, OpenCV, and SQLite for key management, wrapped in an interactive GUI.</p>
+                        <h4>Outcome & Learning</h4>
+                        <p>Presented as a poster at the 2nd National SET Conference (2019). Mastered cryptographic concepts, image processing, and database optimization.</p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Hackathon Semi-Finalist</span>
+                        <h3>Virtual Guide App</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>A cross-platform mobile guide application delivering trustworthy, real-time travel information and offline access for tourists.</p>
+                        <h4>Technical Approach</h4>
+                        <p>Developed using React Native, integrated Google Maps API for route mapping/POIs, and used Firebase for authentication and real-time data sync.</p>
+                        <h4>Outcome & Learning</h4>
+                        <p>Secured Top 5 semi-finalist position at SPIRATHON 2020. Demonstrated full-stack mobile engineering under rapid prototyping constraints.</p>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-tag">Python Suite</span>
+                        <h3>Python Bootcamp Projects</h3>
+                    </div>
+                    <div class="project-body">
+                        <p>A suite of 15 functional applications and games built to master core programming and data structure concepts.</p>
+                        <h4>Highlighted Builds</h4>
+                        <p><strong>Routine Database App:</strong> SQLite CRUD scheduler.<br>
+                           <strong>Caterpillar Game:</strong> Arcade game using Turtle graphics.<br>
+                           <strong>Data Science Plotter:</strong> Interactive visualizations via Pandas & Matplotlib.</p>
+                        <h4>Outcome & Learning</h4>
+                        <p>Established a strong foundation in Python automation, debugging practices, and Git/GitHub repository management.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-alt">
+        <div class="container contact-container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            <p class="contact-subtitle">I'm currently looking for new QA Engineer and Software Development opportunities. Feel free to reach out!</p>
+            
+            <a href="mailto:coolboymohit980@gmail.com" class="email-btn">
+                <i class="fa-solid fa-envelope"></i> coolboymohit980@gmail.com
+            </a>
+
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Mohit. Built with clean HTML5 & CSS3.</p>
+    </footer>
+    <script src="script.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohit Joshi · QA & Dev Portfolio</title>
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f7fc;
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      padding: 2rem 1.5rem;
+      color: #1e2a3a;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px -10px rgba(0, 20, 30, 0.15);
+      padding: 2rem 2.5rem;
+    }
+
+    /* header / name */
+    .profile-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #eef2f6;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .name-title h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0b1a2b;
+      margin-bottom: 0.2rem;
+    }
+
+    .name-title .badge {
+      background: #dbeafe;
+      color: #1e4a7a;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      display: inline-block;
+      margin-top: 0.2rem;
+    }
+
+    .quick-icons {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 1.6rem;
+      color: #2c3e50;
+    }
+
+    .quick-icons i {
+      transition: 0.2s;
+      cursor: default;
+    }
+
+    .quick-icons i:hover {
+      color: #0077b6;
+      transform: scale(1.05);
+    }
+
+    /* overview card */
+    .overview-card {
+      background: #f0f5fe;
+      border-radius: 1.5rem;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      border-left: 6px solid #2563eb;
+    }
+
+    .overview-card p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #1f2b3b;
+    }
+
+    /* grid layout */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 780px) {
+      .container { padding: 1.5rem; }
+      .grid-2 { grid-template-columns: 1fr; gap: 1.5rem; }
+      .profile-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+    }
+
+    /* cards */
+    .card {
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 20, 40, 0.04);
+      padding: 1.5rem 1.8rem;
+      border: 1px solid #eef2f8;
+      transition: 0.2s;
+      height: fit-content;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #0b253b;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 2px solid #e6edf6;
+      padding-bottom: 0.6rem;
+    }
+
+    .card-title i {
+      color: #2563eb;
+      font-size: 1.5rem;
+      width: 2rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.7rem;
+    }
+
+    .skill-tag {
+      background: #eef3fa;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      color: #1f3a57;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .skill-tag i {
+      margin-right: 5px;
+      color: #2563eb;
+      font-size: 0.8rem;
+    }
+
+    .exp-item, .project-item {
+      margin-bottom: 1.3rem;
+    }
+
+    .exp-item strong {
+      display: block;
+      font-size: 1rem;
+      color: #0b253b;
+    }
+
+    .exp-item .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.85rem;
+      color: #3e5a78;
+      margin: 0.2rem 0 0.3rem;
+    }
+
+    .exp-item .meta i {
+      margin-right: 4px;
+      color: #2563eb;
+      width: 1rem;
+    }
+
+    .exp-item ul {
+      padding-left: 1.2rem;
+      margin-top: 0.3rem;
+      font-size: 0.95rem;
+      color: #1f3349;
+    }
+
+    .exp-item ul li {
+      margin-bottom: 0.25rem;
+    }
+
+    .project-item {
+      border-bottom: 1px dashed #dfe7f0;
+      padding-bottom: 0.8rem;
+    }
+    .project-item:last-child { border-bottom: 0; margin-bottom: 0; }
+
+    .project-item .proj-title {
+      font-weight: 600;
+      color: #0b253b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .project-item .proj-title i {
+      color: #2563eb;
+      font-size: 1rem;
+      width: 1.5rem;
+    }
+
+    .project-item .proj-desc {
+      font-size: 0.92rem;
+      color: #2a405a;
+      margin-left: 1.8rem;
+    }
+
+    .activity-item {
+      display: flex;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .activity-item i {
+      color: #2563eb;
+      font-size: 1.2rem;
+      min-width: 1.8rem;
+      padding-top: 2px;
+    }
+
+    .lang-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2.5rem;
+      margin-top: 0.3rem;
+    }
+
+    .lang-row span {
+      font-weight: 500;
+      background: #eef3fa;
+      padding: 0.2rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.95rem;
+    }
+
+    .footer-note {
+      margin-top: 2rem;
+      text-align: right;
+      font-size: 0.85rem;
+      color: #6b7f98;
+      border-top: 1px solid #e2eaf2;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-note i {
+      color: #2563eb;
+      margin: 0 3px;
+    }
+
+    .icon-lg {
+      font-size: 1.2rem;
+      margin-right: 0.3rem;
+    }
+
+    /* special icon for projects: fa-diagram-project (solid) */
+    .fa-diagram-project {
+      color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="profile-header">
+    <div class="name-title">
+      <h1>Mohit Joshi</h1>
+      <span class="badge"><i class="fas fa-bolt" style="margin-right: 6px;"></i>QA Engineer · Java Developer</span>
+    </div>
+    <div class="quick-icons">
+      <i class="fas fa-diagram-project" title="project icon (fa-diagram-project)"></i>
+      <i class="fas fa-code" title="code"></i>
+      <i class="fas fa-layer-group" title="layer-group"></i>
+      <i class="fas fa-folder-open" title="folder-open"></i>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="overview-card">
+    <p><i class="fas fa-quote-left" style="color: #2563eb; margin-right: 8px;"></i>
+      A highly motivated and detail-oriented individual seeking a Junior QA Analyst position. 
+      Passionate about quality, automation, and delivering flawless software. 
+      <i class="fas fa-check-circle" style="color: #2563eb; margin-left: 8px;"></i>
+    </p>
+  </div>
+
+  <!-- 2-COLUMN: SKILLS + EXPERIENCE  -->
+  <div class="grid-2">
+    <!-- SKILLS card -->
+    <div class="card">
+      <div class="card-title"><i class="fas fa-tools"></i> Skills</div>
+      <div style="margin-bottom: 1rem;">
+        <div style="font-weight: 600; font-size: 0.95rem; color: #1f3a57; margin-bottom: 6px;"><i class="fas fa-vial" style="margin-right: 6px; color: #2563eb;"></i>Testing & Documentation</div>
+        <div class="skill-tags">
+          <span class="skill-tag"><i class="fas fa-check"></i>Functional</span>
+          <span class="skill-tag"><i class="fas fa-check"></i>Regression</span>
+          <span class="skill-tag"><i class="fas fa-check"></i>Smoke</span>
+          <span class="skill-tag"><i class="fas fa-check"></i>UI/UX</span>
+          <span class="skill-tag"><i class="fas fa-check"></i>Black-Box</span>
+          <span class="skill-tag"><i class="fas fa-check"></i>Test case</span>
+          <span class="skill-tag"><i class="fas fa-check"></i>Bug Reporting</span>
+          <span class="skill-tag"><i class="fas fa-check"></i>Test Plans</span>
+        </div>
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <div style="font-weight: 600; font-size: 0.95rem; color: #1f3a57; margin-bottom: 6px;"><i class="fas fa-code-branch" style="margin-right: 6px; color: #2563eb;"></i>SDLC & Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag"><i class="fab fa-jira"></i>Jira</span>
+          <span class="skill-tag"><i class="fas fa-flask"></i>Selenium</span>
+          <span class="skill-tag"><i class="fas fa-mail-bulk"></i>Postman</span>
+          <span class="skill-tag"><i class="fas fa-laptop-code"></i>DevTools</span>
+          <span class="skill-tag"><i class="fas fa-sync-alt"></i>Agile/Scrum</span>
+          <span class="skill-tag"><i class="fas fa-water"></i>Waterfall</span>
+          <span class="skill-tag"><i class="fas fa-life-ring"></i>STLC</span>
+        </div>
+      </div>
+      <div>
+        <div style="font-weight: 600; font-size: 0.95rem; color: #1f3a57; margin-bottom: 6px;"><i class="fas fa-laptop" style="margin-right: 6px; color: #2563eb;"></i>Tech & Programming</div>
+        <div class="skill-tags">
+          <span class="skill-tag"><i class="fab fa-html5"></i>HTML</span>
+          <span class="skill-tag"><i class="fab fa-css3-alt"></i>CSS</span>
+          <span class="skill-tag"><i class="fas fa-database"></i>SQL</span>
+          <span class="skill-tag"><i class="fab fa-python"></i>Python</span>
+          <span class="skill-tag"><i class="fas fa-code"></i>C/C++</span>
+          <span class="skill-tag"><i class="fab fa-java"></i>Java</span>
+          <span class="skill-tag"><i class="fab fa-git-alt"></i>Git/GitHub</span>
+          <span class="skill-tag"><i class="fas fa-code"></i>DSA</span>
+          <span class="skill-tag"><i class="fas fa-microchip"></i>OS</span>
+        </div>
+      </div>
+      <div style="margin-top: 1.2rem;">
+        <div style="font-weight: 600; font-size: 0.95rem; color: #1f3a57; margin-bottom: 6px;"><i class="fas fa-users" style="margin-right: 6px; color: #2563eb;"></i>Soft skills</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Attention to Detail</span>
+          <span class="skill-tag">Analytical Thinking</span>
+          <span class="skill-tag">Communication</span>
+          <span class="skill-tag">Problem-Solving</span>
+          <span class="skill-tag">Team Collaboration</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE card -->
+    <div class="card">
+      <div class="card-title"><i class="fas fa-briefcase"></i> Experience</div>
+      
+      <div class="exp-item">
+        <strong>Junior QA Engineer</strong>
+        <div class="meta"><span><i class="fas fa-calendar-alt"></i>Jan 2024 – Jul 2026</span> <span><i class="fas fa-building"></i>ARIBT</span></div>
+        <ul>
+          <li>Tested ERP modules & Smart School Management (SSM) system.</li>
+          <li>Developed test plans, manual & automated tests, defect documentation.</li>
+          <li>UI testing for responsive web apps, Agile collaboration.</li>
+          <li>Daily meetings & task tracking under HR manager.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <strong>Java Developer Intern</strong>
+        <div class="meta"><span><i class="fas fa-calendar-alt"></i>Jan 2023 – Apr 2023</span> <span><i class="fas fa-building"></i>InfoxIT</span></div>
+        <ul>
+          <li>ERP Control Panel: module verification & bug fixing.</li>
+          <li>Wrote SRS, maintained docs, developed Java/Spring Boot code.</li>
+          <li>Integrated front-end with server-side logic.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <strong>QA Intern</strong>
+        <div class="meta"><span><i class="fas fa-calendar-alt"></i>Oct 2022 – Jan 2023</span> <span><i class="fas fa-building"></i>InfoxIT</span></div>
+        <ul>
+          <li>Tested ERP modules, manual/automated tests, defect reporting.</li>
+          <li>UI testing, Agile, daily meetings.</li>
+          <li>Wrote user manuals for dairy, college, e-commerce, trading software.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS + ACTIVITY / LANGUAGES (2-col) -->
+  <div class="grid-2">
+    <!-- PROJECTS -->
+    <div class="card">
+      <div class="card-title"><i class="fas fa-diagram-project"></i> Projects</div>
+      
+      <div class="project-item">
+        <div class="proj-title"><i class="fas fa-brain"></i> Image Caption Generator (Major)</div>
+        <div class="proj-desc">Deep learning model with CNN + LSTM for image descriptions.</div>
+      </div>
+
+      <div class="project-item">
+        <div class="proj-title"><i class="fas fa-cube"></i> Image Encryption · Rubik's Cube</div>
+        <div class="proj-desc">Security-based encryption using Python & SQLite.</div>
+      </div>
+
+      <div class="project-item">
+        <div class="proj-title"><i class="fas fa-map-marked-alt"></i> Virtual Guide App</div>
+        <div class="proj-desc">React-Native mobile app with Google Maps & Firebase integration.</div>
+      </div>
+
+      <div class="project-item">
+        <div class="proj-title"><i class="fas fa-gamepad"></i> Mini projects</div>
+        <div class="proj-desc">Routine database app, caterpillar game, data science plotter (Python bootcamp).</div>
+      </div>
+
+      <div style="margin-top: 0.8rem; background: #f4f9ff; padding: 0.6rem 1rem; border-radius: 40px; font-size: 0.9rem;">
+        <i class="fas fa-graduation-cap" style="color: #2563eb; margin-right: 8px;"></i> 
+        <strong>Bootcamps:</strong> Python (15 apps), CNN with Keras, Git/GitHub, MIT App Inventor, Android Robotics, CNSS.
+      </div>
+    </div>
+
+    <!-- ACTIVITY + LANGUAGE -->
+    <div class="card">
+      <div class="card-title"><i class="fas fa-trophy"></i> Activity & achievements</div>
+      
+      <div class="activity-item">
+        <i class="fas fa-medal"></i>
+        <div><strong>SPIRATHON · Tech Xperience Nepal 2020</strong> <br> Top-five semi-finalist. Built Virtual Guide App for Visit Nepal 2020.</div>
+      </div>
+      <div class="activity-item">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <div><strong>SET Conference 2019</strong> <br> Presented poster “Image Encryption Using Rubik’s Cube” at 2nd National Conference, ACEM.</div>
+      </div>
+      <div class="activity-item">
+        <i class="fas fa-eye"></i>
+        <div><strong>Srijana: The Innovation 2018</strong> <br> Early-stage eye cataract detection app (Java, grayscale coding).</div>
+      </div>
+
+      <div style="margin-top: 1.5rem; border-top: 1px solid #e2eaf2; padding-top: 1.2rem;">
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+          <span style="font-weight: 600;"><i class="fas fa-language" style="color: #2563eb; margin-right: 6px;"></i>Languages</span>
+          <div class="lang-row">
+            <span><i class="fas fa-circle" style="color: #2563eb; font-size: 0.5rem; vertical-align: middle; margin-right: 4px;"></i>Nepali (Native)</span>
+            <span><i class="fas fa-circle" style="color: #2563eb; font-size: 0.5rem; vertical-align: middle; margin-right: 4px;"></i>English</span>
+            <span><i class="fas fa-circle" style="color: #2563eb; font-size: 0.5rem; vertical-align: middle; margin-right: 4px;"></i>Hindi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER with icon note -->
+  <div class="footer-note">
+    <span><i class="fas fa-diagram-project" style="color: #2563eb;"></i> <i class="fas fa-code"></i> <i class="fas fa-layer-group"></i> <i class="fas fa-folder-open"></i>  —  Font Awesome icons: diagram-project, code, layer-group, folder-open</span>
+    <span><i class="fas fa-crown" style="color: #2563eb;"></i> Built from CV · Mohit Joshi</span>
+  </div>
+
+</div>  
+</body>
+</html>

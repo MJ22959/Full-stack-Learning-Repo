@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio | QA Engineer & Developer</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Portfolioicon.png" type="image/x-icon">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header class="header-flex">
+            <div class="nav-logo">
+            <a href="#">
+                <img src="portfoliologo.jpg" alt="Website Logo" width="200" height="90px">
+            </a>
+            </div>
+            <div class="nav-links">
+            <nav class="nav-bar">
+                <ul class="nav-list">
+                    <li><a href="#home"><i class="fa-solid fa-house"></i> &nbsp; Home</a></li>
+                    <li><a href="#about"><i class="fa-solid fa-circle-info"></i> &nbsp; About Me</a></li>
+                    <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i> &nbsp; Projects</a></li>
+                    <li><a href="#skills"><i class="fa-solid fa-code"></i> &nbsp; Skills</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-phone"></i> &nbsp; Contact</a></li>
+                </ul>
+            </nav>
+            
+            </div>
+        </header>
+
+        <section id="home">
+            
+            <h2>Home</h2>
+            <br>
+            <img src="Welcome boy.png" alt="Portfolio Home Image" width="80%" height="400px" position="relative">
+            
+            <p>Welcome to my personal portfolio website. Here you can find information about me, my projects and how to contact me.</p>    
+        </section>
+
+        <section id="about">
+            <br>
+            <h2>About Me</h2>
+            <p>As a very motivated and detail-oriented QA Engineer with a solid foundation in software testing principles and a passion for delivering flawless software products, I bring over two years of hands-on experience in quality assurance to each of my projects. My expertise includes both manual and automated testing methods for a wide variety of software applications.Within my technical toolkit lies a diverse range of skills in areas such as functional, regression and UI/UX testing. Also, I have experience with tools such as Selenium, Jira and Postman. Also, I have a strong background in Agile methodologies and work well within environments that prioritize quality and continuous improvement.In addition to the experience that I have gained through testing, I have also developed skills in Java and Python programming languages. Also, I am certified in network security.The intersection of technology and impact drives me. Whether it was creating an app for a virtual guide during a hackathon or presenting research on security at a national conference, I'm driven by innovation and problem-solving. As a quick learner, clear communicator and team player, I aim to bridge the gap between the technical execution of a project and the user's satisfaction with that project.Now, I am seeking opportunities to expand my role as a QA professional within a company that is forward-thinking in its approach to software development and delivery. I believe that by joining such an organization, I will be able to contribute to the development of software products that are of exceptional quality and functionality.</p>
+        </section>
+
+        <section id="projects">
+            <br>
+            <h2>Projects</h2>
+            <p>Here are some of the projects I have worked on.</p>
+            <ul type=none>
+                <li>
+                    <br>
+                    <h3>Project 1: Image Caption Generator Using Deep Learning (Major Academic Project)</h3>
+                        <p> This project was my capstone academic project, where I built a deep learning model that could automatically generate natural language descriptions for any image that was provided as input to the system. The two main challenges in building such a system were bridging the gap between computer vision and natural language processing.
+                        <h4>Technical Approach:</h4>
+                        <p>The second part of my algorithm utilized a pre-trained Convolutional Neural Network (CNN) to recognize specific objects within the video frame. These models, such as VGG16 and InceptionV3, are pre-trained on datasets of images with labeled objects, allowing them to learn the visual features of those images. These models can recognize specific objects in videos, even if they have never seen the objects before in their training data.To perform the image-to-text task, I implemented a Long Short-Term Memory (LSTM) network as the decoder for the model. The LSTM took the feature vector of an image as input and generated a sequence of words that corresponded to the image.I worked with the Flickr8k and Flickr30k dataset, which contains thousands of images with multiple reference captions, allowing the model to learn the relationship between visual patterns and descriptive language.This model was created using TensorFlow and Keras in Python. During the training of the model, I applied techniques such as teacher forcing and beam search to improve the quality of the generated captions.</p>
+                        <h4>Outcome & Learning:</h4>
+                        <p>This project provided me with extensive hands-on experience with various neural network architectures, transfer learning techniques and sequence generation models. Also, I gained a deeper understanding of data preprocessing, tokenization and model evaluation metrics such as BLEU scores. The outcome of this project reinforced my interest in applying AI techniques to quality assurance and automated testing processes using computer vision.</p>    
+                </li>
+                
+                <li>
+                    <br>
+                    <h3>Project 2: Image Encryption Using Rubik's Cube Based Algorithm (Minor Academic Project)</h3>
+                        <p>In this research-focused project, I created an innovative image encryption system inspired by the fascinating mathematical properties of a Rubik's Cube. The main aim was to boost the security of digital images during transmission or storage, ensuring they remain safe from unauthorized access.</p>
+                        <h4>Technical Approach:</h4>
+                        <p>I crafted an algorithm that viewed an image as a 3D matrix of pixels, applying a series of "rotation" and "permutation" operations—much like scrambling the faces of a Rubik's Cube. This technique effectively shuffled pixel positions and modified color channel values in a way that could be reversed.The encryption key was generated from a specific set of rotation sequences, which made the system robust against brute-force attacks.I built the entire system using Python, leveraging OpenCV for image processing and SQLite for securely storing encryption keys and user metadata.Additionally, the project featured a user-friendly GUI that allowed users to upload images, encrypt or decrypt them, and view the outcomes.</p>
+                        <h4>Outcome & Learning:</h4>
+                        <p>I showcased this project as a poster at the 2nd National SET Conference in 2019, hosted by the Advanced College of Engineering and Management, and it got a great response! This experience really sharpened my skills in cryptographic thinking, image processing, and database integration. Plus, I learned a valuable lesson about the need to strike a balance between security and performance, since encryption processes have to be quick enough to be useful in real-world applications.</p>
+                </li>
+                <li>
+                    <br>
+                    <h3>Project 3: Virtual Guide App (Mobile Application Project)</h3>
+                    <p>I created a cross-platform mobile guide app designed to deliver trustworthy, real-time travel information, especially for tourists. This project first took shape during the SPIRATHON - Tech Xperience Nepal 2020 hackathon, where our team proudly secured a spot as a Top-Five semi-finalist.</p>
+                        <h4>Technical Approach:</h4>
+                        <p>I developed the app using React-Native, which made it super convenient to launch on both Android and iOS with just one codebase.To enhance the user experience, I integrated the Google Maps API for location services, route mapping, and suggestions for nearby points of interest.For the backend and data storage, I opted for Firebase, which took care of user authentication, real-time database updates, and cloud storage for travel guides and multimedia content.Some of the standout features include an interactive map, carefully curated travel itineraries, offline access to saved guides, and a system for user reviews.</p>
+                        <h4>Outcome & Learning:</h4>
+                        <p>The project served as a hands-on showcase of full-stack mobile development. It helped me dive into working with third-party APIs, managing state in a React environment, and crafting a user-friendly interface. The hackathon experience also sharpened my skills in working under pressure, collaborating with a team, and pitching our product to judges. We centered the app around the "Visit Nepal 2020" campaign, highlighting my knack for connecting technical solutions with real-world themes.</p> 
+                </li>
+                <li>
+                    <br>
+                    <h3>Project 4: Mini Projects from Python Bootcamp</h3>
+                    <p>In the Python Bootcamp 2020 on Udemy, I created 15 functional applications and games that really helped me solidify my programming basics and broaden my practical coding skills. These mini projects played a crucial role in moving from just learning theory to actually developing real-world applications.</p>
+                        <h4>Here are a few projects I've worked on:</h4>
+                        <p><strong>Routine Database App:</strong> This is a CRUD application I created using Python and SQLite. It helps manage daily schedules, tasks, and reminders. Working on this project really deepened my understanding of database connectivity and how to optimize queries.<br><strong>Caterpillar Game:</strong> I built this fun, classic arcade-style game with the Turtle graphics library. In this project, I tackled game loops, collision detection, and score tracking, which was a great way to hone my programming skills.<br><strong>Data Science Plotter:</strong> This tool is all about data visualization. I used Pandas and Matplotlib to create interactive plots and charts from CSV datasets, which really boosted my data analysis abilities.</p>
+                        <h4>Outcome & Learning:</h4>
+                        <p>Working on these projects really helped me build a solid foundation in Python programming, problem-solving, and debugging. I also got my feet wet with version control through Git and GitHub, as I managed repositories for each of my projects. The diverse range of projects—everything from games to handy utilities—expanded my understanding of how Python can be utilized in various fields, from automation to data science.</p>
+                </li>   
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>These are some of the skills I have acquired over time.</p>  
+            <a><i class="fa-brands fa-react"></i>React</a>
+            <a><i class="fa-brands fa-python"></i>Python</a>  
+            <a><i class="fa-brands fa-java"></i>Java</a>
+            <a><i class="fa-brands fa-html5"></i>HTML5</a>
+            <a><i class="fa-brands fa-css3-alt"></i>CSS3</a>
+            <a><i class="fa-brands fa-js"></i>JavaScript</a>  
+            <a><i class="fa-brands fa-github"></i>GitHub</a>
+        </section>  
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can reach me at my email: <a href="mailto:coolboymohit980@gmail.com">coolboymohit980@gmail.com <i class="fa-brands fa-linkedin-in">&nbsp;</i><i class="fa-brands fa-facebook-f">&nbsp;</i><i class="fa-brands fa-tiktok"></i>&nbsp;<i class="fa-brands fa-whatsapp"></i></a></p>
+        </section>
+        <div id="footer">
+            <i class="fa-solid fa-copyright"></i>
+            2026 My Portfolio. All rights reserved.</p>
+        </div>
+    </body>
+</html>
