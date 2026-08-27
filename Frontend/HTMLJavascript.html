@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Basics Day1</title>
+        <link rel="icon" type="image/x-icon" href="htmlicon.jpeg">
+        <style>
+            body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; }
+            form { display: flex; gap: 8px; }
+            #todoInput { flex: 1; padding: 8px; }
+            li { display: flex; justify-content: space-between; margin: 10px 0; }
+            li.completed span { text-decoration: line-through; color: #777; }
+            li span { cursor: pointer; }
+        </style>
+    </head>
+    <body>
+        <h1>Todo List</h1>
+        <form id="todoForm">
+            <input id="todoInput" type="text" placeholder="Enter a task" required>
+            <button type="submit">Add</button>
+        </form>
+        <ul id="todoList"></ul>
+    </body>
+    <script>
+        const todoForm = document.getElementById("todoForm");
+        const todoInput = document.getElementById("todoInput");
+        const todoList = document.getElementById("todoList");
+
+        todoForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const listItem = document.createElement("li");
+            const taskText = document.createElement("span");
+            taskText.textContent = todoInput.value;
+            taskText.addEventListener("click", function () {
+                listItem.classList.toggle("completed");
+            });
+
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.type = "button";
+            deleteButton.addEventListener("click", function () {
+                listItem.remove();
+            });
+
+            listItem.append(taskText, deleteButton);
+            todoList.appendChild(listItem);
+            todoInput.value = "";
+            todoInput.focus();
+        });
+    </script>
+</html>
