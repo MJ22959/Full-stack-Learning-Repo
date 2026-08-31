@@ -9,6 +9,7 @@
 	<button id="decrement" type="button"><Strong>-</Strong></button>
 	<span id="count">0</span>
 	<button id="increment" type="button"><strong>+</strong></button>
+	<button id="resetBtn" type="reset" ><strong>Reset</strong></button>
 
 	<script>
 		let count = 0;
@@ -23,6 +24,12 @@
 			count = Math.max(0, count - 1);
 			countDisplay.textContent = count;
 		});
+		document.getElementById('resetBtn').addEventListener('click', () => {
+			count = 0;
+			countDisplay.textContent = count;
+		});
+
+
 	</script>
 </body>
 </html>
