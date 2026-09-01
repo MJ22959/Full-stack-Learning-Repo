@@ -203,30 +203,30 @@
 // // // }
 // // // obj.greet();
 
-// // let students=[{
-// //     name:"Mohit",
-// //     age:27,
-// //     isStudent: false,
-// //     marks: 90
-// // },
-// // {
-// //     name:"Rohit",
-// //     age:20,
-// //     isStudent: true,
-// //     marks: 90
-// // },
-// // {
-// //     name:"Tohit",
-// //     age:21,
-// //     isStudent: true,
-// //     marks: 60
-// // }];
+// let students=[{
+//     name:"Mohit",
+//     age:27,
+//     isStudent: false,
+//     marks: 90
+// },
+// {
+//     name:"Rohit",
+//     age:20,
+//     isStudent: true,
+//     marks: 90
+// },
+// {
+//     name:"Tohit",
+//     age:21,
+//     isStudent: true,
+//     marks: 60
+// }];
 
-// // students.forEach(student => {
-// //     if(student.isStudent===true){
-// //         console.log(student.name)
-// //     }
-// // });
+// students.forEach(student => {
+//     if(student.isStudent===true){
+//         console.log(student.name)
+//     }
+// });
 // // for(let i=1;i<10;i++){
 // //     console.log(i);
 // // }
