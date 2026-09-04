@@ -162,4 +162,3 @@ console.log(personAccount.totalExpense());
 personAccount.addExpense("Transport", 200);
 console.log(personAccount.totalExpense());
 console.log(personAccount.accountBalance());
-
