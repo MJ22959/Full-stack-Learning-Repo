@@ -12,6 +12,7 @@
     <!-- FontAwesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style1.css"> 
+    <script src="indexportfolio.js" defer></script>
     </head>
 <body>
 
@@ -19,10 +20,17 @@
     <header class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <img src="portfoliologo.jpg" alt="Website Logo">
+                <img src="portfoliologo.jpg" alt="Black rounded portfolio badge with the word PORTFOLIO in large white capital letters, surrounded by glowing gold lines and warm yellow lights on a clean white background; the design feels polished and futuristic" style="width: 220px; height: 60px; object-fit: cover;">
             </a>
+
+            <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-List">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <nav>
-                <ul class="nav-list">
+                <ul class="nav-list" id="nav-List">
                     <li><a href="#home" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="#about" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
                     <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
@@ -46,7 +54,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="Welcome boy.png" alt="Portfolio Hero Image">
+                <img src="Welcome boy1.png" alt="Stylized portrait of a young man wearing dark clothing and facing the viewer with a confident, friendly expression; a soft gray background creates a clean, modern setting">
             </div>
         </div>
     </section>
@@ -167,26 +175,53 @@
                 <h2>Get In Touch</h2>
                 <div class="title-underline"></div>
             </div>
-            <p class="contact-subtitle">I'm currently looking for new QA Engineer and Software Development opportunities. Feel free to reach out!</p>
-            
-            <a href="mailto:coolboymohit980@gmail.com" class="email-btn">
-                <i class="fa-solid fa-envelope"></i> coolboymohit980@gmail.com
+            <div class="contact-box">
+                        <form action="mailto:alex@example.com" method="post" enctype="text/plain" onsubmit="this.reset();">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your email" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Write your message here..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send Email</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <p class="contact-subtitle" style="padding: 70px; text-align: center; font-weight: bold;">
+                <strong>I'm currently looking for new QA Engineer and Software Development opportunities. Feel free to reach out!</strong>
+            </p>
+            <a href="mailto:coolboymohit980@gmail.com" class="email-btn" style="display: block; text-align: center; font-weight: bold;">
+                <strong><i class="fa-solid fa-envelope"></i> E-mail: coolboymohit980@gmail.com &nbsp; &nbsp; &nbsp; &nbsp;
+               <i class="fa-solid fa-square-phone"></i>  Phone-no: +977-9867302522</strong>
             </a>
 
             <div class="social-links">
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/mohit-joshiit/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100004214499802" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@coolboymohit980" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://wa.me/9779867302522" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://github.com/MJ22959" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Mohit. Built with clean HTML5 & CSS3.</p>
+        <p>&copy; 2026 Mohit. Built with clean HTML5 ,CSS3 & Javascript.</p>
     </footer>
-    <script src="script.js" defer></script>
+    
 
 </body>
+
 </html>
