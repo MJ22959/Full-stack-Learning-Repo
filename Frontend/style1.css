@@ -31,6 +31,10 @@ body {
     line-height: 1.6;
 }
 
+p {
+    text-align: justify;
+}
+
 /* --- Header & Navigation --- */
 .navbar {
     position: fixed;
