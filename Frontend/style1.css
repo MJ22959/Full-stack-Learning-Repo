@@ -313,18 +313,21 @@ p {
 .contact-subtitle {
     color: var(--text-muted);
     margin-bottom: 2rem;
+    text-align: center;
+    padding: 20px;
 }
 
 .email-btn {
-    display: inline-block;
+    display: block;
+    width: fit-content;
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--primary-color);
     text-decoration: none;
     padding: 0.8rem 1.5rem;
+    margin: 0 auto 2rem;
     background-color: rgba(108, 92, 231, 0.08);
     border-radius: 30px;
-    margin-bottom: 2rem;
     transition: var(--transition);
 }
 
@@ -366,6 +369,12 @@ footer {
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
     font-size: 0.85rem;
+}
+
+footer p,
+.footer-text,
+.contact-subtitle p {
+    text-align: center;
 }
 
 /* --- Responsive Adjustments --- */
@@ -478,7 +487,7 @@ footer {
         margin: 0 auto;
     gap: 1.25rem;
     padding: clamp(1.25rem, 3vw, 2rem);
-    border: 1px solid color-mix(in srgb, var(--color-blue) 70%, transparent);
+    border: 1px solid rgba(94, 132, 255, 0.7);
     border-radius: 20px;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
     box-shadow: 0 14px 35px rgba(0, 0, 0, 0.16);
@@ -502,7 +511,7 @@ footer {
     width: 100%;
     padding: 0.9rem 1rem;
     border-radius: 10px;
-    border: 1px solid color-mix(in srgb, var(--color-blue) 85%, white 15%);
+    border: 1px solid rgba(94, 132, 255, 0.85);
     background: rgba(0, 0, 0, 0.16);
   color: var(--color-light-blue);
   font: inherit;
