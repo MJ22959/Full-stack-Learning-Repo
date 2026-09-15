@@ -17,7 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    background-image: linear-gradient(to bottom left, hwb(271 56% 2%), hwb(255 62% 3%)); );
 
 html {
     scroll-behavior: smooth;
@@ -58,7 +58,8 @@ p {
 }
 
 .logo img {
-    height: 45px;
+   
+    height: 65px;
     width: auto;
     object-fit: contain;
 }
