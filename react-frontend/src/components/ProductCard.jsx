@@ -1,9 +1,9 @@
-const ProductCard = ({ name, price, category, instock }) => {
+const ProductCard = ({ name, price, category, instock, image }) => {
   return (
     <div className="w-full max-w-sm overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md transition-shadow hover:shadow-lg">
       <img
-        src="momos.jpeg"
-        alt="Momos served on a plate against a plain background"
+        src={image}
+        alt={`${name} served on a plate`}
         className="h-52 w-full object-cover"
       />
       <div className="space-y-3 p-5">
