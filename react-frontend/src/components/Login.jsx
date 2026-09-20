@@ -1,7 +1,6 @@
+import React from 'react'
 
-
-
-const Header = () => {
+const Login = () => {
   return (
     <main>
      <header className="flex flex-row justify-between">
@@ -21,8 +20,21 @@ const Header = () => {
           <a href="#Login" className="font-bold text-gray-800 hover:text-blue-800 pr-5"> Contact</a>
         </div>
     </header>
-  </main>
+  
+    <div>
+    <form>
+        <div className='flex flex-col items-center justify-center h-screen'>
+        <h1>Login Form</h1>
+        <input type='text' placeholder='Username' />
+        <input type='text' placeholder='Password'/>
+        <button type='button' onClick={() => alert('Successfully login')}>
+          Submit
+        </button>
+    </div>   
+    </form>
+    </div>
+    </main>
   )
 }
 
-export default Header
+export default Login
